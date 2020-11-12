@@ -5,12 +5,8 @@
     <!--
       WARNING - @mbg.generated
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="lastModifyTime" jdbcType="TIMESTAMP" property="lastmodifytime" />
-    <result column="typeId" jdbcType="INTEGER" property="typeid" />
-    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="USER" jdbcType="CHAR" property="user" />
+    <result column="CURRENT_CONNECTIONS" jdbcType="BIGINT" property="currentConnections" />
+    <result column="TOTAL_CONNECTIONS" jdbcType="BIGINT" property="totalConnections" />
   </resultMap>
 </mapper>

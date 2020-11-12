@@ -1,5 +1,5 @@
 package ${basePackage}.service;
-import ${basePackage}.model.${modelNameUpperCamel};
+import ${basePackage}.entity.${modelNameUpperCamel};
 import ${basePackage}.core.Service;
 
 

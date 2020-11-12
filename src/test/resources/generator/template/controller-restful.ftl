@@ -1,8 +1,8 @@
-package ${basePackage}.web;
+package ${basePackage}.controller;
 
 import ${basePackage}.core.Result;
 import ${basePackage}.core.ResultGenerator;
-import ${basePackage}.model.${modelNameUpperCamel};
+import ${basePackage}.entity.${modelNameUpperCamel};
 import ${basePackage}.service.${modelNameUpperCamel}Service;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
