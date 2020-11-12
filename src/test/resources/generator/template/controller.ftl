@@ -22,30 +22,50 @@ public class ${modelNameUpperCamel}Controller {
     @Resource
     private ${modelNameUpperCamel}Service ${modelNameLowerCamel}Service;
 
+
+    /**
+    * 新增功能
+    * @param ${modelNameLowerCamel}
+    * **/
     @PostMapping("/add")
     public Result add(${modelNameUpperCamel} ${modelNameLowerCamel}) {
         ${modelNameLowerCamel}Service.save(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
 
+    /**
+    * 删除功能
+    * @param id 删除对象的id
+    * **/
     @PostMapping("/delete")
     public Result delete(@RequestParam Integer id) {
         ${modelNameLowerCamel}Service.deleteById(id);
         return ResultGenerator.genSuccessResult();
     }
 
+    /**
+    * 更新功能
+    * @param ${modelNameLowerCamel} 要更新的对象
+    * **/
     @PostMapping("/update")
     public Result update(${modelNameUpperCamel} ${modelNameLowerCamel}) {
         ${modelNameLowerCamel}Service.update(${modelNameLowerCamel});
         return ResultGenerator.genSuccessResult();
     }
-
+    /**
+    * 根据id查询
+    * @param id 查询对象id
+    * **/
     @PostMapping("/detail")
     public Result detail(@RequestParam Integer id) {
         ${modelNameUpperCamel} ${modelNameLowerCamel} = ${modelNameLowerCamel}Service.findById(id);
         return ResultGenerator.genSuccessResult(${modelNameLowerCamel});
     }
-
+    /**
+    * 查询所有可分页查询
+    * @param page 页数
+    * @param size 分页长度
+    * **/
     @PostMapping("/list")
     public Result list(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "0") Integer size) {
         PageHelper.startPage(page, size);

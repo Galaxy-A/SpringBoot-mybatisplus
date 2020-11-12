@@ -18,7 +18,7 @@ import static com.company.project.core.ProjectConstant.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/game?characterEncoding=utf8&serverTimezone=Asia/Shanghai";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/smbms?characterEncoding=utf8&serverTimezone=Asia/Shanghai";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "1271309617";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.cj.jdbc.Driver";
@@ -39,7 +39,7 @@ public class CodeGenerator {
     public static void main(String[] args) {
         // 多表同时生成
         // genCode("表名1","表名2");
-        genCode("表名");
+        genCode("smbms_user","smbms_role");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 
